@@ -1,0 +1,17 @@
+n = int(input())
+counter = 0
+for i in range(0, n):
+    m = str(input())
+    lon = len(m)
+    if lon % 2 == 0:
+        for j in range(1, lon // 2):
+            if m[j] == m[lon - (j + 1)]:
+                print('YES')
+            else:
+                print('NO')
+    else:
+        for x in range(1, (lon - 1) // 2):
+            if m[x] == m[lon - (x + 1)]:
+                print('YES')
+            else:
+                print('NO')
